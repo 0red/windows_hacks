@@ -1,4 +1,4 @@
-#How to get the stored wifi passwords in Windows?
+# How to get the stored wifi passwords in Windows?
 Use Power Shell and type
 
 ```powershell
