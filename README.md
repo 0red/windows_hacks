@@ -15,3 +15,5 @@ netsh wlan show profiles | Select-String -Pattern "All User Profile.+\:\s(.+)$" 
 	Write-Host "'$k'='$p1'"
 }
 ```
+
+Based on [https://www.pcworld.com/article/411078/how-to-find-saved-wi-fi-passwords-on-your-windows-10-pc.html]
