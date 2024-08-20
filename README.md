@@ -46,3 +46,25 @@ regedit /e "%USERPROFILE%\Desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTat
 Double-click on the *.reg file and accept the import.
 
 Based on [https://stackoverflow.com/questions/13023920/how-to-export-import-putty-sessions-list]
+
+
+# File Explorer max file size limit 
+```
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
+
+FileSizeLimitInBytes DWORD 4284217728
+```
+# Internet trusted zone
+```
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains
+www.zzz.com DWORD 2    ????? (not sure)
+```
+```
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\zzzz.com
+-->sub
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\zzz.com\www
+https DWORD 2
+```
+
+
+```
