@@ -17,3 +17,32 @@ netsh wlan show profiles | Select-String -Pattern "All User Profile.+\:\s(.+)$" 
 ```
 
 Based on [https://www.pcworld.com/article/411078/how-to-find-saved-wi-fi-passwords-on-your-windows-10-pc.html]
+
+
+# RegEdit Favourites
+
+Save the registry:
+
+```
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Regedit\Favorites
+```
+
+
+# How to export/import PuTTY sessions list?
+
+## Export
+cmd.exe, requires elevated prompt due to regedit:
+
+Only sessions (produces file putty-sessions.reg on the Desktop):
+
+```
+regedit /e "%USERPROFILE%\Desktop\putty-sessions.reg" HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions
+```
+All settings except ssh keys (produces file putty.reg on the Desktop):
+```
+regedit /e "%USERPROFILE%\Desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham
+```
+## Import
+Double-click on the *.reg file and accept the import.
+
+Based on [https://stackoverflow.com/questions/13023920/how-to-export-import-putty-sessions-list]
