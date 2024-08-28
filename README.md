@@ -71,12 +71,11 @@ https DWORD 2
 [https://www.cyberciti.biz/faq/removing-password-from-pdf-on-linux/]
 
 ```
-qpdf --decrypt protected.pdf unprotected.pdf
-gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted.pdf -c .setpdfwrite -f encrypted.pdf
+qpdf --decrypt protected.pdf unprotected_qpdf.pdf
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted_gs.pdf -c .setpdfwrite -f encrypted.pdf
 ```
 ## Windows
 [https://sourceforge.net/projects/qpdf/]
-
-
-
+```
+"C:\Program Files\qpdf 11.9.1\bin\qpdf.exe" --decrypt encrypted.pdf unencrypted_win.pdf
 ```
