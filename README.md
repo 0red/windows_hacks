@@ -66,5 +66,17 @@ Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Se
 https DWORD 2
 ```
 
+# delete PDF password
+## Linux
+[https://www.cyberciti.biz/faq/removing-password-from-pdf-on-linux/]
+
+```
+qpdf --decrypt protected.pdf unprotected.pdf
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted.pdf -c .setpdfwrite -f encrypted.pdf
+```
+## Windows
+[https://sourceforge.net/projects/qpdf/]
+
+
 
 ```
