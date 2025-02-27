@@ -1,3 +1,9 @@
+# Windows Key from BIOS
+Windows+R cmd <enter>
+```bat
+wmic path softwarelicensingservice get OA3xOriginalProductKey 
+```
+
 # How to get the stored wifi passwords in Windows?
 Use Power Shell and type
 
